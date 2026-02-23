@@ -1,4 +1,5 @@
 import 'package:bloc_todo/bloc/todo_bloc.dart';
+import 'package:bloc_todo/ui/favorate_screen.dart';
 import 'package:bloc_todo/ui/todo_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,8 +20,12 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-
-        home: TodoScreen()
+        themeMode: ThemeMode.dark,
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          useMaterial3: true
+        ),
+        home: FavorateScreen()
       ),
     );
   }
